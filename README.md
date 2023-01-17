@@ -4,13 +4,13 @@
 Aplicația are ca scop principal arhivarea de fișiere dintr-un folder, dezarhivarea și afișarea elementelor unei arhive. Arhivele cu care aplicația rulează sunt doar cele de tip .tar(informații cu privire la acest tip de arhive se pot găsi [aici](https://www.fileformat.info/format/tar/corion.htm)). Pentru acest lucru am folosit biblioteca standard C pentru crearea de structuri ce conțin datele despre fișiere, completarea acestor câmpuri și formarea arhivei. 
 
 ## How to use
-###Build
+### Build
 	make build
 
-###Run
+### Run
 	./archiver
 
-###Commands
+### Commands
 Pentru creare de arhive:
 	
 	create nume_arhiva nume_director/
@@ -24,7 +24,7 @@ Pentru extragerea unui singur fișier din cadrul unei arhive:
 	extract nume_fisier nume_arhiva
 
 
-###Exemplu Utilizare
+### Exemplu Utilizare
 	user@user-pc:~\$ ./archiver
 	create arhiva_mea.tar
 	> Wrong command!
@@ -42,10 +42,10 @@ Pentru extragerea unui singur fișier din cadrul unei arhive:
 	> File extracted!
 	exit
 
-##Detalii suplimentare despre implementare
+## Detalii suplimentare despre implementare
 Pe parcurs, pentru transformarile valorilor numerice din baza 10 in baza 8 si invers vom folosi functiile DtoO, UItoO, OtoUI, LUtoO.
 
-###Interacțiunea cu utilizatorul
+### Interacțiunea cu utilizatorul
 Vom citi linia de instructiuni folosind comanda readCommand. 
 Aceasta va completa variabilele command si param1 respectiv param2, daca va fi cazul.
 Comenzile pe care programul le poate primi sunt "codificate" de functia commandChoice astfel:
@@ -59,7 +59,7 @@ Se vor face apoi verificarile necesare fiecarei ramuri in parte.
 La final comanda si param1 respectiv param2 vor fi stersi pentru citirea liniei urmatoare.
 
 
-###Arhivare(comanda *archive*):
+### Arhivare(comanda *archive*):
 Se va folosi functia createArchive care primeste ca parametri numele arhivei ce urmeaza sa fie creata si folderul din care vor fi extrase fisierele.
 Vom dechide fisierul files.txt si ii vom determina lungimea.
 Apoi, vom extrage datele necesare din acest fisier si le vom scrie in header, folosind functia readFileData.
@@ -98,7 +98,7 @@ Procedura va continua pana cand se va ajunge la finalul fisierului files.txt.
 La final, vom scrie un bloc de date de 512 bytes gol la sfarsitul arhivei, reprezentand finalul acesteia.
 
 
-###Afișarea fișierelor dintr-o arhivă(comanda *list*):
+### Afișarea fișierelor dintr-o arhivă(comanda *list*):
 Pentru a afisa toate fisierele dintr-o arhiva vom folosi functia listArchive.
 Functia va citi intr-un block de date un header. Pentru a ne asigura ca datele citite reprezinta un header vom verifica integritatea campului MODE, el fiind, in cazul nostru, mereu "GNUtar ".
 De fiecare data cand in campul header, campul MAGIC va contine "GNUtar " vom afisa numele fisierului.
