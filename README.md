@@ -45,6 +45,8 @@ Pentru extragerea unui singur fișier din cadrul unei arhive:
 ## Detalii suplimentare despre implementare
 Pe parcurs, pentru transformarile valorilor numerice din baza 10 in baza 8 si invers vom folosi functiile DtoO, UItoO, OtoUI, LUtoO.
 
+---
+
 ### Interacțiunea cu utilizatorul
 Vom citi linia de instructiuni folosind comanda readCommand. 
 Aceasta va completa variabilele command si param1 respectiv param2, daca va fi cazul.
@@ -58,6 +60,7 @@ Comenzile pe care programul le poate primi sunt "codificate" de functia commandC
 Se vor face apoi verificarile necesare fiecarei ramuri in parte.
 La final comanda si param1 respectiv param2 vor fi stersi pentru citirea liniei urmatoare.
 
+---
 
 ### Arhivare(comanda *archive*):
 Se va folosi functia createArchive care primeste ca parametri numele arhivei ce urmeaza sa fie creata si folderul din care vor fi extrase fisierele.
@@ -97,6 +100,7 @@ Vom deschide fisierul pentru citire si il vom scrie in blocuri de cate 512 bytes
 Procedura va continua pana cand se va ajunge la finalul fisierului files.txt.
 La final, vom scrie un bloc de date de 512 bytes gol la sfarsitul arhivei, reprezentand finalul acesteia.
 
+---
 
 ### Afișarea fișierelor dintr-o arhivă(comanda *list*):
 Pentru a afisa toate fisierele dintr-o arhiva vom folosi functia listArchive.
