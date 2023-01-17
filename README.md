@@ -1,9 +1,9 @@
-#TAR Archiver
+# TAR Archiver
 
-##Descriere Implementare
+## Descriere Implementare
 Aplicația are ca scop principal arhivarea de fișiere dintr-un folder, dezarhivarea și afișarea elementelor unei arhive. Arhivele cu care aplicația rulează sunt doar cele de tip .tar(informații cu privire la acest tip de arhive se pot găsi [aici](https://www.fileformat.info/format/tar/corion.htm)). Pentru acest lucru am folosit biblioteca standard C pentru crearea de structuri ce conțin datele despre fișiere, completarea acestor câmpuri și formarea arhivei. 
 
-##How to use
+## How to use
 ###Build
 	make build
 
